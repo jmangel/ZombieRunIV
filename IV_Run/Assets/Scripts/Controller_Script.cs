@@ -28,7 +28,7 @@ public class Controller_Script : MonoBehaviour {
 	void Update()
 	{
 		
-		if(GameObject.Find("Character").transform.position.y <=66 && Input.GetKeyDown(KeyCode.Space))
+		if(GameObject.Find("Character").transform.position.y <=66 && Input.GetKeyDown(KeyCode.UpArrow))
 		{
 			GetComponent<Rigidbody>().AddForce(new Vector3(0,jumpForce,0));
 		}
