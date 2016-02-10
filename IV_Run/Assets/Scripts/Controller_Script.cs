@@ -32,6 +32,9 @@ public class Controller_Script : MonoBehaviour {
 		{
 			GetComponent<Rigidbody>().AddForce(new Vector3(0,jumpForce,0));
 		}
+		if (GameObject.Find ("Character").transform.position.y > 65.5 && Input.GetKeyDown (KeyCode.DownArrow)) {
+			GetComponent<Rigidbody> ().AddForce (new Vector3 (0, -jumpForce, 0));
+		}
 	//void Flip
 }
 }
