@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 77dba8c180ce24c32a101b1211133153
-timeCreated: 1455692282
+timeCreated: 1455748131
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -48,7 +48,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 15
+  spritePixelsToUnits: 12
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
@@ -62,19 +62,19 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 9
-      pivot: {x: 0.5, y: 0.25}
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 6, y: 19}
-        - {x: 1, y: 20}
-        - {x: -4, y: 20}
-        - {x: -10, y: 10}
-        - {x: -10, y: -3}
-        - {x: -9, y: -8}
-        - {x: 3, y: -8}
-        - {x: 7, y: -4}
-        - {x: 8, y: 10}
-        - {x: 8, y: 17}
+      - - {x: 6, y: 20.6}
+        - {x: 1, y: 21.6}
+        - {x: -4, y: 21.6}
+        - {x: -10, y: 11.6}
+        - {x: -10, y: -1.3999996}
+        - {x: -9, y: -6.3999996}
+        - {x: 3, y: -6.3999996}
+        - {x: 7, y: -2.3999996}
+        - {x: 8, y: 11.6}
+        - {x: 8, y: 18.6}
     - name: Char1_1
       rect:
         serializedVersion: 2
@@ -83,16 +83,16 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 9
-      pivot: {x: 0.5, y: 0.25}
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -5, y: 21}
-        - {x: -7, y: 18}
-        - {x: -7, y: -8}
-        - {x: 5, y: -8}
-        - {x: 10, y: 0}
-        - {x: 10, y: 19}
-        - {x: 4, y: 21}
+      - - {x: -5, y: 22.6}
+        - {x: -7, y: 19.6}
+        - {x: -7, y: -6.3999996}
+        - {x: 5, y: -6.3999996}
+        - {x: 10, y: 1.6000004}
+        - {x: 10, y: 20.6}
+        - {x: 4, y: 22.6}
     - name: Char1_2
       rect:
         serializedVersion: 2
@@ -101,18 +101,18 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 9
-      pivot: {x: 0.5, y: 0.25}
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 3, y: 20}
-        - {x: -2, y: 20}
-        - {x: -6, y: 17}
-        - {x: -6, y: -6}
-        - {x: -3, y: -8}
-        - {x: 7, y: -8}
-        - {x: 11, y: 3}
-        - {x: 11, y: 11}
-        - {x: 9, y: 16}
+      - - {x: 3, y: 21.6}
+        - {x: -2, y: 21.6}
+        - {x: -6, y: 18.6}
+        - {x: -6, y: -4.3999996}
+        - {x: -3, y: -6.3999996}
+        - {x: 7, y: -6.3999996}
+        - {x: 11, y: 4.6000004}
+        - {x: 11, y: 12.6}
+        - {x: 9, y: 17.6}
     - name: Char1_3
       rect:
         serializedVersion: 2
@@ -121,18 +121,18 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 9
-      pivot: {x: 0.5, y: 0.25}
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 6, y: 21}
-        - {x: -5, y: 21}
-        - {x: -9, y: 13}
-        - {x: -9, y: -1}
-        - {x: -3, y: -8}
-        - {x: 5, y: -8}
-        - {x: 6, y: -7}
-        - {x: 8, y: -1}
-        - {x: 8, y: 16}
+      - - {x: 6, y: 22.6}
+        - {x: -5, y: 22.6}
+        - {x: -9, y: 14.6}
+        - {x: -9, y: 0.6000004}
+        - {x: -3, y: -6.3999996}
+        - {x: 5, y: -6.3999996}
+        - {x: 6, y: -5.3999996}
+        - {x: 8, y: 0.6000004}
+        - {x: 8, y: 17.6}
     outline: []
   spritePackingTag: 
   userData: 

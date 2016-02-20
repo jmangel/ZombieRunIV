@@ -1,9 +1,11 @@
-﻿using UnityEngine;
+﻿using UnityEditor;
+using UnityEngine;
 using System.Collections;
 
 public class Controller_Script : MonoBehaviour {
 
 	public float maxSpeed =10;
+	public float speedZ =50;
 
 	public float jumpForce = 700;
 
@@ -21,20 +23,21 @@ public class Controller_Script : MonoBehaviour {
 
 
 		float movex = Input.GetAxis ("Horizontal");
-		//float movey = Input.GetAxis ("Vertical");
+		float movez = Input.GetAxis ("Vertical");
 
-		GetComponent<Rigidbody> ().velocity = new Vector3 (movex * maxSpeed, GetComponent<Rigidbody> ().velocity.y, GetComponent<Rigidbody> ().velocity.z); 
+		GetComponent<Rigidbody> ().velocity = new Vector3 (movex * maxSpeed, GetComponent<Rigidbody> ().velocity.y, speedZ); 
 	}
 	void Update()
 	{
 		
 		if(GameObject.Find("Character").transform.position.y ==65.5 && Input.GetKeyDown(KeyCode.UpArrow))
 		{
-			GetComponent<Rigidbody>().AddForce(new Vector3(0,jumpForce,0));
+			GetComponent<Rigidbody>().AddForce(new Vector3(0,jumpForce,speedZ));
 		}
 		if (GameObject.Find ("Character").transform.position.y > 65.5 && Input.GetKeyDown (KeyCode.DownArrow)) {
-			GetComponent<Rigidbody> ().AddForce (new Vector3 (0, -jumpForce, 0));
+			GetComponent<Rigidbody> ().AddForce (new Vector3 (0, -jumpForce, speedZ));
 		}
+
 	//void Flip
-}
+	}
 }
