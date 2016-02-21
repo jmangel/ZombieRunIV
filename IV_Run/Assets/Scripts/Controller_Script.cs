@@ -1,5 +1,6 @@
 ﻿using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class Controller_Script : MonoBehaviour {
@@ -60,14 +61,25 @@ public class Controller_Script : MonoBehaviour {
 		if(showGUI)
 		{
 			GUI.Box(new Rect(0,0,Screen.width,Screen.height),"");
-			if (GUI.Button (new Rect (Screen.width / 2, Screen.height / 2, 100, 50), "Continue")) {
+			if (GUI.Button (new Rect (Screen.width / 2, Screen.height / 2-75, 100, 50), "Continue")) {
 				showGUI = false;
 
 				Time.timeScale = 1;
 				CanPause = true;
 				
 			}
+			if(GUI.Button (new Rect (Screen.width / 2, Screen.height / 2, 100, 50),"Restart"))
+			{
+				showGUI = false;
+				SceneManager.LoadScene (1);
+				Time.timeScale = 1;
+				CanPause = true;
 			}
+			if(GUI.Button (new Rect (Screen.width / 2, Screen.height / 2+75, 100, 50),"Main Menu"))
+			{
+				SceneManager.LoadScene (0);
+			}
+		}
 
 	}
 }
