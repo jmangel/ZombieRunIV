@@ -78,6 +78,8 @@ public class Controller_Script : MonoBehaviour {
 			if(GUI.Button (new Rect (Screen.width / 2, Screen.height / 2+75, 100, 50),"Main Menu"))
 			{
 				SceneManager.LoadScene (0);
+				Time.timeScale = 1;
+				CanPause = true;
 			}
 		}
 
