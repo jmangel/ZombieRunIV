@@ -45,6 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\CameraRunner_Script.cs" />
      <Compile Include="Assets\Scripts\Controller_Script.cs" />
      <Compile Include="Assets\Scripts\Destroyer_Script.cs" />
      <Compile Include="Assets\Scripts\Pause_Script.cs" />
