@@ -1,9 +1,11 @@
 fileFormatVersion: 2
 guid: 5a19d8c24f2ed446a89e17ee26d57847
-timeCreated: 1456012076
+timeCreated: 1456087706
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: trash1_0
+    21300002: trash1_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,26 +32,64 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
-  nPOTScale: 1
+    wrapMode: 1
+  nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
-  alphaIsTransparency: 0
-  textureType: -1
+  alphaIsTransparency: 1
+  textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: trash1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5, y: 12}
+        - {x: 0, y: 12}
+        - {x: -5, y: 10}
+        - {x: -10, y: 3}
+        - {x: -10, y: -9}
+        - {x: -9, y: -12}
+        - {x: 9, y: -12}
+        - {x: 11, y: -11}
+        - {x: 11, y: -1}
+        - {x: 10, y: 6}
+    - name: trash1_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 12}
+        - {x: -10, y: 10}
+        - {x: -10, y: -12}
+        - {x: 11, y: -12}
+        - {x: 11, y: 7}
+        - {x: 5, y: 12}
     outline: []
   spritePackingTag: 
   userData: 
