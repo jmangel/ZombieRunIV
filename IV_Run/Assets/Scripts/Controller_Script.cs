@@ -9,6 +9,7 @@ public class Controller_Script : MonoBehaviour {
 
 	public float jumpForce = 700;
 	bool CanPause = true;
+	bool showGUI = false;
 	public LayerMask whatIsGround;
 
 
@@ -24,7 +25,6 @@ public class Controller_Script : MonoBehaviour {
 
 
 		float movex = Input.GetAxis ("Horizontal");
-		float movez = Input.GetAxis ("Vertical");
 
 		GetComponent<Rigidbody> ().velocity = new Vector3 (movex * maxSpeed, GetComponent<Rigidbody> ().velocity.y, speedZ); 
 	}
@@ -39,19 +39,35 @@ public class Controller_Script : MonoBehaviour {
 			GetComponent<Rigidbody> ().AddForce (new Vector3 (0, -jumpForce, speedZ));
 		}
 		if (Input.GetKeyDown (KeyCode.Escape)) {
-			if(CanPause)
-			{
-				Debug.Log("pause");
-				Time.timeScale=0;
+			if (CanPause) {
+				Debug.Log ("pause");
+				Time.timeScale = 0;
 				CanPause = false;
+				showGUI = true;
+			} else {
+				CanPause = true;
+				showGUI = false;
+				Time.timeScale = 1;
 			}
-			else
-			{
-				Time.timeScale=1;
-				CanPause=true;
-			}
+
 		}
 
+
 	//void Flip
+	}
+	void OnGUI()
+	{
+		if(showGUI)
+		{
+			GUI.Box(new Rect(0,0,Screen.width,Screen.height),"");
+			if (GUI.Button (new Rect (Screen.width / 2, Screen.height / 2, 100, 50), "Continue")) {
+				showGUI = false;
+
+				Time.timeScale = 1;
+				CanPause = true;
+				
+			}
+			}
+
 	}
 }
