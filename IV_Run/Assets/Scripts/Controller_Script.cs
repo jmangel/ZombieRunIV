@@ -8,12 +8,13 @@ public class Controller_Script : MonoBehaviour {
 	public float speedZ =50;
 
 	public float jumpForce = 700;
-
+	bool CanPause = true;
 	public LayerMask whatIsGround;
 
 
 	// Use this for initialization
 	void Start () {
+		 CanPause = true;
 	
 	}
 	
@@ -36,6 +37,19 @@ public class Controller_Script : MonoBehaviour {
 		}
 		if (GameObject.Find ("Character").transform.position.y > 65.5 && Input.GetKeyDown (KeyCode.DownArrow)) {
 			GetComponent<Rigidbody> ().AddForce (new Vector3 (0, -jumpForce, speedZ));
+		}
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			if(CanPause)
+			{
+				Debug.Log("pause");
+				Time.timeScale=0;
+				CanPause = false;
+			}
+			else
+			{
+				Time.timeScale=1;
+				CanPause=true;
+			}
 		}
 
 	//void Flip
