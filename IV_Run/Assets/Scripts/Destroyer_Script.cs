@@ -3,13 +3,13 @@ using System.Collections;
 
 public class Destroyer_Script : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	void OnTriggerEnter(Collider other)
+	{
+		if (other.gameObject.transform.parent) {
+			Destroy (other.gameObject.transform.parent.gameObject);
+		} 
+		else {
+			Destroy(other.gameObject);
+		}
 	}
 }
