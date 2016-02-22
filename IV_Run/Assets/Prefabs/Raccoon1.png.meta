@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 692bb2a824dcf490e8f62dbc96803055
-timeCreated: 1456087690
+timeCreated: 1456094040
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -50,7 +50,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 10
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
@@ -63,16 +63,16 @@ TextureImporter:
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -14, y: 12}
-        - {x: -14, y: -5}
-        - {x: -10, y: -10}
-        - {x: 15, y: -10}
-        - {x: 15, y: -1}
-        - {x: 8, y: 12}
+      - - {x: -14, y: 20}
+        - {x: -14, y: 3}
+        - {x: -10, y: -2}
+        - {x: 15, y: -2}
+        - {x: 15, y: 7}
+        - {x: 8, y: 20}
     - name: Raccoon1_1
       rect:
         serializedVersion: 2
@@ -80,16 +80,16 @@ TextureImporter:
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -14, y: 12}
-        - {x: -14, y: -5}
-        - {x: -10, y: -10}
-        - {x: 15, y: -10}
-        - {x: 15, y: -1}
-        - {x: 8, y: 12}
+      - - {x: -14, y: 20}
+        - {x: -14, y: 3}
+        - {x: -10, y: -2}
+        - {x: 15, y: -2}
+        - {x: 15, y: 7}
+        - {x: 8, y: 20}
     - name: Raccoon1_2
       rect:
         serializedVersion: 2
@@ -97,16 +97,16 @@ TextureImporter:
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -14, y: 12}
-        - {x: -14, y: -5}
-        - {x: -10, y: -10}
-        - {x: 15, y: -10}
-        - {x: 15, y: -1}
-        - {x: 8, y: 12}
+      - - {x: -14, y: 20}
+        - {x: -14, y: 3}
+        - {x: -10, y: -2}
+        - {x: 15, y: -2}
+        - {x: 15, y: 7}
+        - {x: 8, y: 20}
     - name: Raccoon1_3
       rect:
         serializedVersion: 2
@@ -114,18 +114,18 @@ TextureImporter:
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -12, y: 11}
-        - {x: -14, y: 8}
-        - {x: -14, y: -3}
-        - {x: -12, y: -8}
-        - {x: -10, y: -10}
-        - {x: 15, y: -10}
-        - {x: 15, y: -1}
-        - {x: 7, y: 11}
+      - - {x: -12, y: 19}
+        - {x: -14, y: 16}
+        - {x: -14, y: 5}
+        - {x: -12, y: 0}
+        - {x: -10, y: -2}
+        - {x: 15, y: -2}
+        - {x: 15, y: 7}
+        - {x: 7, y: 19}
     - name: Raccoon1_4
       rect:
         serializedVersion: 2
@@ -133,18 +133,18 @@ TextureImporter:
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -12, y: 11}
-        - {x: -14, y: 8}
-        - {x: -14, y: -3}
-        - {x: -12, y: -8}
-        - {x: -10, y: -10}
-        - {x: 15, y: -10}
-        - {x: 15, y: -1}
-        - {x: 7, y: 11}
+      - - {x: -12, y: 19}
+        - {x: -14, y: 16}
+        - {x: -14, y: 5}
+        - {x: -12, y: 0}
+        - {x: -10, y: -2}
+        - {x: 15, y: -2}
+        - {x: 15, y: 7}
+        - {x: 7, y: 19}
     - name: Raccoon1_5
       rect:
         serializedVersion: 2
@@ -152,17 +152,17 @@ TextureImporter:
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -11, y: 11}
-        - {x: -14, y: 9}
-        - {x: -14, y: -4}
-        - {x: -10, y: -10}
-        - {x: 15, y: -10}
-        - {x: 15, y: 2}
-        - {x: 3, y: 11}
+      - - {x: -11, y: 19}
+        - {x: -14, y: 17}
+        - {x: -14, y: 4}
+        - {x: -10, y: -2}
+        - {x: 15, y: -2}
+        - {x: 15, y: 10}
+        - {x: 3, y: 19}
     outline: []
   spritePackingTag: 
   userData: 
