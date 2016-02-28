@@ -30,3 +30,6 @@ sysinfo.txt
 *.unitypackage
 
 IV_Run/Temp/__Backupscenes/0.backup
+IV_Run/Temp/
+IV_Run/Library/metadata/
+.DS_Store
