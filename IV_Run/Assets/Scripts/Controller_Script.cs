@@ -5,21 +5,38 @@ using System.Collections;
 
 public class Controller_Script : MonoBehaviour {
 
-	public float maxSpeed =10;
+	public float maxSpeed =5;
 	public float speedZ =50;
 
 	public float jumpForce = 700;
 	bool CanPause = true;
 	bool showGUI = false;
 	public LayerMask whatIsGround;
+	private Transform objectTransfom;
+	private float noMovementThreshold = 0.0001f;
+	private const int noMovementFrames = 3;
+	Vector3[] previousLocations = new Vector3[noMovementFrames];
+	private bool isMoving;
+	public bool IsMoving
+	{
+		get{ return isMoving; }
+	}
 
 
 	// Use this for initialization
 	void Start () {
 		 CanPause = true;
+		Time.timeScale = 4;
 	
 	}
-	
+	void Awake()
+	{
+		//For good measure, set the previous locations
+		for(int i = 0; i < previousLocations.Length; i++)
+		{
+			previousLocations[i] = Vector3.zero;
+		}
+	}
 	// Update is called once per frame
 	void FixedUpdate () {
 
@@ -50,11 +67,10 @@ public class Controller_Script : MonoBehaviour {
 				showGUI = false;
 				Time.timeScale = 1;
 			}
-
+				
 		}
 
 
-	//void Flip
 	}
 	void OnGUI()
 	{
