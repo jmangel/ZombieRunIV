@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/demoscene.unity
+- path: Assets/ZRIV - Main Menu.unity
   isLoaded: 1
   isActive: 1
