@@ -10,7 +10,7 @@ public class Controller_Script : MonoBehaviour {
 
 	public float jumpForce = 700;
 	bool CanPause = true;
-	bool showGUI = false;
+	public bool showGUI = false;
 	public LayerMask whatIsGround;
 	private Transform objectTransfom;
 	private float noMovementThreshold = 0.0001f;
@@ -87,7 +87,8 @@ public class Controller_Script : MonoBehaviour {
 			if(GUI.Button (new Rect (Screen.width / 2, Screen.height / 2, 100, 50),"Restart"))
 			{
 				showGUI = false;
-				SceneManager.LoadScene (1);
+                GameObject.Find("Character").GetComponent<CollisionScript>().invincibilityExpire = 0;
+                SceneManager.LoadScene (1);
 				Time.timeScale = 1;
 				CanPause = true;
 			}
