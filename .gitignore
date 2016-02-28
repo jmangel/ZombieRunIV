@@ -30,3 +30,14 @@ sysinfo.txt
 *.unitypackage
 
 IV_Run/Temp/__Backupscenes/0.backup
+
+IV_Run/Library/expandedItems
+
+*.dwlt
+
+./IV_Run/Library/CurrentLayout.dwlt
+./IV_Run/Temp/ProcessJobs/
+./IV_Run/Temp/UnityLockfile
+./IV_Run/ZOMBIESRUN3/
+./IV_Run/ZOMBIESRUN4/
+./IV_Run/ZOMBIESRUN5/
