@@ -71,7 +71,6 @@ public class Controller_Script : MonoBehaviour {
 		}
 
 
-	//void Flip
 	}
 	void OnGUI()
 	{
