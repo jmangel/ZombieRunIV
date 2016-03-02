@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class CollisionScript : MonoBehaviour
 {
@@ -22,8 +23,7 @@ public class CollisionScript : MonoBehaviour
         }
         if (collision.gameObject.tag == "Untagged")
         {
-            //GameObject.Find("Character").GetComponent<Controller_Script>().showGUI = true;
-            Time.timeScale = 0;
+			SceneManager.LoadScene (2);
         }
     }
 }

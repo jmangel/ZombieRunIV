@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class PlayButtonScript : MonoBehaviour {
-	
+public class MainMenuButtonScript : MonoBehaviour {
+
 	public void onClick(){
 
-		SceneManager.LoadScene (1);
+		SceneManager.LoadScene (0);
 	}
 }
