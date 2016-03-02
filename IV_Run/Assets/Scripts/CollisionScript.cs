@@ -5,16 +5,17 @@ using UnityEngine.SceneManagement;
 public class CollisionScript : MonoBehaviour
 {
     //initialize variables for invincibility powerups
-    public int invincibilityTime = 10; //get this from upgrade settings in database
+    public int invincibilityTime = 10*4; //get this from upgrade settings in database
     public float invincibilityExpire = 0;
 
     public float recentlyHitExpire = 0;
-    public int recentlyHitTime = 5;
+    public int recentlyHitTime = 5*4;
     
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "PowerUp")
         {
+            Destroy(collision.gameObject);
             invincibilityExpire = Time.time + invincibilityTime;
         }
         
