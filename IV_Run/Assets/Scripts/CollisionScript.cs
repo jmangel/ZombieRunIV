@@ -17,6 +17,7 @@ public class CollisionScript : MonoBehaviour
         {
             Destroy(collision.gameObject);
             invincibilityExpire = Time.time + invincibilityTime;
+            recentlyHitExpire = 0;
         }
         
         if (collision.gameObject.tag == "Untagged")
