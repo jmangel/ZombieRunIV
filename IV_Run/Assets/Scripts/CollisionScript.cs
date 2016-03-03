@@ -32,7 +32,7 @@ public class CollisionScript : MonoBehaviour
                 }
                 else //if this is second hit in short amount of time
                 {
-                    SceneManager.LoadScene(0);
+                    SceneManager.LoadScene(2);
                 }
             }
             else //if invincible
