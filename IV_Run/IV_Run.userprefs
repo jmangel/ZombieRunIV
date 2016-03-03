@@ -1,14 +1,16 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BuildingSpawnScript1.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SunPathFollower.cs">
     <Files>
-      <File FileName="Assets/Scripts/BuildingSpawnScript1.cs" Line="20" Column="14" />
+      <File FileName="Assets/Scripts/SunPathFollower.cs" Line="26" Column="37" />
+      <File FileName="Assets/Scripts/BuildingSpawnScript1.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/SpawnScript.cs" Line="5" Column="1" />
       <File FileName="Assets/Scripts/Pause_Script.cs" Line="1" Column="1" />
       <File FileName="Assets/demoscript.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Controller_Script.cs" Line="1" Column="1" />
       <File FileName="Assets/Standard Assets/2D/Sprites/HUDScript.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Destroyer_Script.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BigObstacleSpawnScript.cs" Line="9" Column="29" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
