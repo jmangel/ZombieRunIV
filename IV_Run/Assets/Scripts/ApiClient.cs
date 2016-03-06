@@ -5,31 +5,50 @@ using System.Net;
 using System.IO;
 using Newtonsoft.Json.Linq;
 
+using UnityEngine;
+
 public class ApiClient
 {
 	static string api = "https://zombie-run-iv.herokuapp.com";
-	//static string api = "http://localhost:5000";
 
 	public static Player getPlayer(string name) {
 		Player player = null;
 		string endpoint = api + "/players/find?name=" + name + "&device_id=" + Util.getDeviceID ();
-		HttpWebRequest req = (HttpWebRequest)WebRequest.Create (endpoint);
-		HttpWebResponse resp = (HttpWebResponse)req.GetResponse ();
 
-		if (resp.StatusCode == HttpStatusCode.NotFound) {
-			req = (HttpWebRequest)WebRequest.Create (endpoint);
-			req.Method = "POST";
-			resp = (HttpWebResponse)req.GetResponse ();
-		} else if (resp.StatusCode != HttpStatusCode.OK) {
-			Console.WriteLine ("Could not connect to server");
-			return null;
+		string response = null;
+		try {
+			WebClient client = new WebClient ();
+			response = client.DownloadString (endpoint);
+		} catch(Exception e) {
+			Debug.LogError ("creating player inside try catch");
+			return ApiClient.createPlayer (name);
 		}
-		Stream dataStream = resp.GetResponseStream();
-		StreamReader reader = new StreamReader(dataStream);
-		string data = reader.ReadToEnd();
-		Console.WriteLine (data);
+		if (!response.Contains ("id")) {
+			Debug.LogError ("creating player outside try catch");
+			return ApiClient.createPlayer (name);
+		}
 
-		JObject json = JObject.Parse (data);
+
+
+//		HttpWebRequest req = (HttpWebRequest)WebRequest.Create (endpoint);
+//		HttpWebResponse resp = (HttpWebResponse)req.GetResponse ();
+//
+//		if (resp.StatusCode == HttpStatusCode.NotFound) {
+//			resp.Close ();
+//			Debug.LogError ("Couldn't find user, creating it new");
+//			return ApiClient.createPlayer (name);
+//		} else if (resp.StatusCode != HttpStatusCode.OK) {
+//			Debug.LogError ("Couldn't connect to server");
+//			return null;
+//		} else {
+//			Debug.LogError ("Found the user!");
+//		}
+//		Stream dataStream = resp.GetResponseStream();
+//		StreamReader reader = new StreamReader(dataStream);
+//		string data = reader.ReadToEnd();
+//		Console.WriteLine (data);
+
+		JObject json = JObject.Parse (response);
 		player = new Player(
 			(int)json["id"],
 			(string)json["name"],
@@ -38,6 +57,33 @@ public class ApiClient
 			(int)json["powerup_lvl"]
 		);
 		return player;
+	}
+
+	public static Player createPlayer(string name) {
+		Player player = null;
+		string endpoint = api + "/players?name=" + name + "&device_id=" + Util.getDeviceID ();
+//		HttpWebRequest req = (HttpWebRequest)WebRequest.Create (endpoint);
+//		req.Method = "POST";
+
+		WebClient client = new WebClient ();
+		string response = client.UploadString (endpoint,"");
+
+//		HttpWebResponse resp = (HttpWebResponse)req.GetResponse ();
+//		Stream dataStream = resp.GetResponseStream();
+//		StreamReader reader = new StreamReader(dataStream);
+//		string data = reader.ReadToEnd();
+//		Console.WriteLine (data);
+
+		JObject json = JObject.Parse (response);
+		player = new Player(
+			(int)json["id"],
+			(string)json["name"],
+			(int)json["hifive_count"],
+			(int)json["characters"],
+			(int)json["powerup_lvl"]
+		);
+		return player;
+
 	}
 
 	public static List<Score> getScores() {

@@ -19,6 +19,13 @@ public class Player
 		this.powerup_lvl = powerup_lvl;
 	}
 
+	public string toString() {
+		return "Player " + this.id + " has name " + this.name + 
+			" \nand is registered on device " + this.device_id + 
+			" \nwith " + this.hifive_count + " high fives, \n" + 
+			this.characters + " characters, \nand powerup level " + this.powerup_lvl;
+	}
+
 	public int getID() {
 		return this.id;
 	}
