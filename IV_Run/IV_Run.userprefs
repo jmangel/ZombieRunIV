@@ -1,16 +1,19 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SunPathFollower.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Controller_Script.cs">
     <Files>
-      <File FileName="Assets/Scripts/SunPathFollower.cs" Line="26" Column="37" />
+      <File FileName="Assets/Scripts/Controller_Script.cs" Line="8" Column="26" />
       <File FileName="Assets/Scripts/BuildingSpawnScript1.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/SpawnScript.cs" Line="5" Column="1" />
+      <File FileName="Assets/Scripts/SpawnScript.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Pause_Script.cs" Line="1" Column="1" />
       <File FileName="Assets/demoscript.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Controller_Script.cs" Line="1" Column="1" />
-      <File FileName="Assets/Standard Assets/2D/Sprites/HUDScript.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Destroyer_Script.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/BigObstacleSpawnScript.cs" Line="9" Column="29" />
+      <File FileName="Assets/Scripts/CollisionScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlaneSpawnScript.cs" Line="21" Column="73" />
+      <File FileName="Assets/Scripts/PlayButtonScript.cs" Line="8" Column="3" />
+      <File FileName="Assets/Scripts/MainMenuButtonScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/HUDScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/CameraRunner_Script.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

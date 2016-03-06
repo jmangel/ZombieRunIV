@@ -5,7 +5,7 @@ using System.Collections;
 
 public class Controller_Script : MonoBehaviour {
 
-	public float maxSpeed =5;
+	public float maxSpeed =3;
 	public float speedZ =50;
 
 	public float jumpForce = 700;
@@ -65,7 +65,7 @@ public class Controller_Script : MonoBehaviour {
 			} else {
 				CanPause = true;
 				showGUI = false;
-				Time.timeScale = 1;
+				Time.timeScale = 4;
 			}
 				
 		}
@@ -80,7 +80,7 @@ public class Controller_Script : MonoBehaviour {
 			if (GUI.Button (new Rect (Screen.width / 2, Screen.height / 2-75, 100, 50), "Continue")) {
 				showGUI = false;
 
-				Time.timeScale = 1;
+				Time.timeScale = 4;
 				CanPause = true;
 				
 			}

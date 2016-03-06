@@ -18,7 +18,7 @@ public class PlaneSpawnScript : MonoBehaviour {
 
 	void Spawn()
 	{
-		Instantiate(obj[Random.Range(0,obj.GetLength(0))], new Vector3(-15, transform.position.y, transform.position.z), Quaternion.identity);
+		Instantiate(obj[Random.Range(0,obj.GetLength(0))], new Vector3(-15, 65, transform.position.z), Quaternion.identity);
 		Invoke ("Spawn",Random.Range(spawnMin, spawnMax));
 	}
 
