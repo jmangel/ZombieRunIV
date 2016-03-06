@@ -58,3 +58,4 @@
 /Users/StevensMac/ZombieRunIV/IV_Run/Temp/bin/Debug/Unity.CecilTools.dll
 /Users/StevensMac/ZombieRunIV/IV_Run/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Users/StevensMac/ZombieRunIV/IV_Run/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/StevensMac/ZombieRunIV/IV_Run/Temp/bin/Debug/Newtonsoft.Json.dll

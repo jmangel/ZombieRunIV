@@ -66,3 +66,8 @@
 /Users/Tracy/github/CS48/ZombieRunIV/IV_Run/Temp/bin/Debug/Unity.CecilTools.dll
 /Users/Tracy/github/CS48/ZombieRunIV/IV_Run/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Users/Tracy/github/CS48/ZombieRunIV/IV_Run/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+<<<<<<< Updated upstream
+/Users/Tracy/github/CS48/ZombieRunIV/IV_Run/Temp/bin/Debug/Newtonsoft.Json.dll
+=======
+/Users/StevensMac/ZombieRunIV/IV_Run/Temp/bin/Debug/Newtonsoft.Json.dll
+>>>>>>> Stashed changes

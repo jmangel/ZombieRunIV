@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\BuildingSpawnScript.cs" />
      <Compile Include="Assets\Scripts\BuildingSpawnScript1.cs" />
      <Compile Include="Assets\Scripts\CameraRunner_Script.cs" />
+     <Compile Include="Assets\Scripts\CircularPath.cs" />
      <Compile Include="Assets\Scripts\CollisionScript.cs" />
      <Compile Include="Assets\Scripts\Controller_Script.cs" />
      <Compile Include="Assets\Scripts\Destroyer_Script.cs" />
