@@ -54,14 +54,16 @@
      <Compile Include="Assets\Scripts\CollisionScript.cs" />
      <Compile Include="Assets\Scripts\Controller_Script.cs" />
      <Compile Include="Assets\Scripts\Destroyer_Script.cs" />
+     <Compile Include="Assets\Scripts\GreetPlayerScript.cs" />
      <Compile Include="Assets\Scripts\HUDScript.cs" />
      <Compile Include="Assets\Scripts\HighFiveStoreButton.cs" />
      <Compile Include="Assets\Scripts\MainMenuButtonScript.cs" />
+     <Compile Include="Assets\Scripts\NameInputButtonScript.cs" />
      <Compile Include="Assets\Scripts\Pause_Script.cs" />
      <Compile Include="Assets\Scripts\PlaneSpawnScript.cs" />
      <Compile Include="Assets\Scripts\PlayButtonScript.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
-     <Compile Include="Assets\Scripts\Program.cs" />
+     <Compile Include="Assets\Scripts\PlayerSingleton.cs" />
      <Compile Include="Assets\Scripts\Score.cs" />
      <Compile Include="Assets\Scripts\SpawnScript.cs" />
      <Compile Include="Assets\Scripts\StoreScript.cs" />
