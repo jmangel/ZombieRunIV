@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\CollisionScript.cs" />
      <Compile Include="Assets\Scripts\Controller_Script.cs" />
      <Compile Include="Assets\Scripts\Destroyer_Script.cs" />
+     <Compile Include="Assets\Scripts\GameOverScript.cs" />
      <Compile Include="Assets\Scripts\GreetPlayerScript.cs" />
      <Compile Include="Assets\Scripts\HUDScript.cs" />
      <Compile Include="Assets\Scripts\HighFiveStoreButton.cs" />
@@ -67,6 +68,7 @@
      <Compile Include="Assets\Scripts\Score.cs" />
      <Compile Include="Assets\Scripts\SpawnScript.cs" />
      <Compile Include="Assets\Scripts\StoreScript.cs" />
+     <Compile Include="Assets\Scripts\SunIntensity.cs" />
      <Compile Include="Assets\Scripts\SunPathFollower.cs" />
      <Compile Include="Assets\Scripts\Util.cs" />
      <Compile Include="Assets\demoscript.cs" />

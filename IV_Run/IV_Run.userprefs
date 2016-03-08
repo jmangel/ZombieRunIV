@@ -1,9 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CollisionScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CameraRunner_Script.cs">
     <Files>
       <File FileName="Assets/Scripts/BuildingSpawnScript.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/CollisionScript.cs" Line="18" Column="2" />
+      <File FileName="Assets/Scripts/CollisionScript.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/BuildingSpawnScript1.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Controller_Script.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/SpawnScript.cs" Line="1" Column="1" />
@@ -22,7 +22,7 @@
       <File FileName="Assets/Scripts/GreetPlayerScript.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/BigObstacleSpawnScript.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/ApiClient.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/CircularPath.cs" Line="30" Column="26" />
+      <File FileName="Assets/Scripts/CircularPath.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
