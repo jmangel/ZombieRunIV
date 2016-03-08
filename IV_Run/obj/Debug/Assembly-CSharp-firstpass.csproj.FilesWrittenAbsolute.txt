@@ -71,3 +71,21 @@
 =======
 /Users/StevensMac/ZombieRunIV/IV_Run/Temp/bin/Debug/Newtonsoft.Json.dll
 >>>>>>> Stashed changes
+/Users/FrostyNarwhal/ZombieRunIV/IV_Run/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/FrostyNarwhal/ZombieRunIV/IV_Run/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
+/Users/FrostyNarwhal/ZombieRunIV/IV_Run/obj/Debug/Assembly-CSharp-firstpass.dll
+/Users/FrostyNarwhal/ZombieRunIV/IV_Run/obj/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/FrostyNarwhal/ZombieRunIV/IV_Run/Temp/bin/Debug/UnityEngine.dll
+/Users/FrostyNarwhal/ZombieRunIV/IV_Run/Temp/bin/Debug/UnityEditor.dll
+/Users/FrostyNarwhal/ZombieRunIV/IV_Run/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/FrostyNarwhal/ZombieRunIV/IV_Run/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/FrostyNarwhal/ZombieRunIV/IV_Run/Temp/bin/Debug/Newtonsoft.Json.dll
+/Users/FrostyNarwhal/ZombieRunIV/IV_Run/Temp/bin/Debug/Mono.Cecil.dll
+/Users/FrostyNarwhal/ZombieRunIV/IV_Run/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/FrostyNarwhal/ZombieRunIV/IV_Run/Temp/bin/Debug/Unity.DataContract.dll
+/Users/FrostyNarwhal/ZombieRunIV/IV_Run/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/FrostyNarwhal/ZombieRunIV/IV_Run/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/FrostyNarwhal/ZombieRunIV/IV_Run/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/FrostyNarwhal/ZombieRunIV/IV_Run/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/FrostyNarwhal/ZombieRunIV/IV_Run/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/FrostyNarwhal/ZombieRunIV/IV_Run/Temp/bin/Debug/Mono.Cecil.Mdb.dll

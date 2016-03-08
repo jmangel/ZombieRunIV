@@ -8,6 +8,6 @@ public class CameraRunner_Script : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		transform.position = new Vector3 (-15, 70, player.position.z - 75);
+		transform.position = new Vector3 (-15, 70, player.position.z - 80);
 	}
 }

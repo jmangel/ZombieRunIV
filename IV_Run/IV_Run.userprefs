@@ -1,19 +1,28 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Controller_Script.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CollisionScript.cs">
     <Files>
-      <File FileName="Assets/Scripts/Controller_Script.cs" Line="8" Column="26" />
+      <File FileName="Assets/Scripts/BuildingSpawnScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/CollisionScript.cs" Line="18" Column="2" />
       <File FileName="Assets/Scripts/BuildingSpawnScript1.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controller_Script.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/SpawnScript.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Pause_Script.cs" Line="1" Column="1" />
       <File FileName="Assets/demoscript.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Destroyer_Script.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/CollisionScript.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlaneSpawnScript.cs" Line="21" Column="73" />
-      <File FileName="Assets/Scripts/PlayButtonScript.cs" Line="8" Column="3" />
+      <File FileName="Assets/Scripts/PlaneSpawnScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayButtonScript.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/MainMenuButtonScript.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/HUDScript.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/CameraRunner_Script.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayerSingleton.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Player.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/NameInputButtonScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/HighFiveStoreButton.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GreetPlayerScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BigObstacleSpawnScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/ApiClient.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/CircularPath.cs" Line="30" Column="26" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

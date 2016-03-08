@@ -19,7 +19,7 @@ public class BuildingSpawnScript1 : MonoBehaviour {
 
 	void Spawn()
 	{
-		Instantiate(obj[Random.Range(0,obj.GetLength(0))], new Vector3(xranges[Random.Range(0, xranges.Length)], 65.5f, transform.position.z), Quaternion.identity);
+		Instantiate(obj[Random.Range(0,obj.GetLength(0))], new Vector3(xranges[Random.Range(0, xranges.Length)], 67.5f, transform.position.z), Quaternion.identity);
 		Invoke ("Spawn",Random.Range(spawnMin, spawnMax));
 	}
 

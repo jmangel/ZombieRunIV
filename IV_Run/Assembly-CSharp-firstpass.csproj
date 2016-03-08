@@ -215,7 +215,7 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
- <HintPath>/Users/StevensMac/ZombieRunIV/IV_Run/Assets/Scripts/Newtonsoft.Json.dll</HintPath>
+ <HintPath>/Users/FrostyNarwhal/ZombieRunIV/IV_Run/Assets/Scripts/Newtonsoft.Json.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
