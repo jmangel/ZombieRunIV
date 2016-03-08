@@ -9,9 +9,10 @@ using UnityEngine;
 
 public class ApiClient
 {
-	static string api = "https://zombie-run-iv.herokuapp.com";
+	static string api = "http://zombie-run-iv.herokuapp.com";
 
-	public static Player getPlayer(string name) {
+
+    public static Player getPlayer(string name) {
 		Player player = null;
 		string endpoint = api + "/players/find?name=" + name + "&device_id=" + Util.getDeviceID ();
 
@@ -28,26 +29,6 @@ public class ApiClient
 			return ApiClient.createPlayer (name);
 		}
 
-
-
-//		HttpWebRequest req = (HttpWebRequest)WebRequest.Create (endpoint);
-//		HttpWebResponse resp = (HttpWebResponse)req.GetResponse ();
-//
-//		if (resp.StatusCode == HttpStatusCode.NotFound) {
-//			resp.Close ();
-//			Debug.LogError ("Couldn't find user, creating it new");
-//			return ApiClient.createPlayer (name);
-//		} else if (resp.StatusCode != HttpStatusCode.OK) {
-//			Debug.LogError ("Couldn't connect to server");
-//			return null;
-//		} else {
-//			Debug.LogError ("Found the user!");
-//		}
-//		Stream dataStream = resp.GetResponseStream();
-//		StreamReader reader = new StreamReader(dataStream);
-//		string data = reader.ReadToEnd();
-//		Console.WriteLine (data);
-
 		JObject json = JObject.Parse (response);
 		player = new Player(
 			(int)json["id"],
@@ -62,17 +43,9 @@ public class ApiClient
 	public static Player createPlayer(string name) {
 		Player player = null;
 		string endpoint = api + "/players?name=" + name + "&device_id=" + Util.getDeviceID ();
-//		HttpWebRequest req = (HttpWebRequest)WebRequest.Create (endpoint);
-//		req.Method = "POST";
 
 		WebClient client = new WebClient ();
 		string response = client.UploadString (endpoint,"");
-
-//		HttpWebResponse resp = (HttpWebResponse)req.GetResponse ();
-//		Stream dataStream = resp.GetResponseStream();
-//		StreamReader reader = new StreamReader(dataStream);
-//		string data = reader.ReadToEnd();
-//		Console.WriteLine (data);
 
 		JObject json = JObject.Parse (response);
 		player = new Player(
