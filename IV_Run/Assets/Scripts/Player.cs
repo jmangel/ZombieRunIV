@@ -7,8 +7,11 @@ public class Player
 	string name;
 	string device_id;
 	int hifive_count;
+	int last_hifives;
 	int characters;
 	int powerup_lvl;
+    Score lastScore = null;
+    int lastRank = -1;
 
 	public Player (int id, string name, int hifive_count, int characters, int powerup_lvl) {
 		this.id = id;
@@ -34,9 +37,22 @@ public class Player
 		return this.name;
 	}
 
+	public int getLastScore() {
+		return this.lastScore.score;
+	}
+
+	public int getLastRank() {
+		return this.lastRank;
+	}
+
 	/**
 	 * `hifive_count` operations
 	 */
+
+	public void addHiFives(int hifives) {
+		this.last_hifives = hifives;
+		this.setHiFives(this.getHiFives() + hifives);
+	}
 
 	public int getHiFives() {
 		return this.hifive_count;
@@ -48,6 +64,10 @@ public class Player
 
 	public bool saveHiFives() {
 		return ApiClient.saveHiFives (this.id, this.hifive_count);
+	}
+
+	public int getLastHifives() {
+		return this.last_hifives;
 	}
 
 	/**
@@ -88,6 +108,8 @@ public class Player
 	}
 
 	public int addScore(int score) {
-		return ApiClient.newScore (score, this.name);
+        this.lastScore = new Score(score, this.name, null);
+		this.lastRank = ApiClient.newScore (this.lastScore);
+        return this.lastRank;
 	}
 }

@@ -4,12 +4,12 @@ using UnityEngine.SceneManagement;
 
 public class CollisionScript : MonoBehaviour
 {
-    //initialize variables for invincibility powerups
-    public int invincibilityTime = 10*4; //get this from upgrade settings in database
+    //initialize variables for invincibility powerups and last hit
     public float invincibilityExpire = 0;
-
     public float recentlyHitExpire = 0;
-    public int recentlyHitTime = 5*4;
+
+    int invincibilityTime = 5*4; //get this from upgrade settings in database
+    int recentlyHitTime = 5*4; //these are x4 because of timeScale
 
 	public GameObject[] zom;
 
@@ -27,9 +27,13 @@ public class CollisionScript : MonoBehaviour
 
 		}
         
-		if (collision.gameObject.tag == "Untagged") {
+        else if (collision.gameObject.tag == "Ped"){
+            Destroy(collision.gameObject);
+            GameObject.Find("Main Camera").GetComponent<HUDScript>().runHighFives += 1;
+        }
+
+		else if (collision.gameObject.tag == "Untagged") {
 			if (Time.time > invincibilityExpire) {
-				//do obstacular stuffs
 				if (Time.time > recentlyHitExpire) { //if you haven't been hit recently
 					Destroy (collision.gameObject);
 					recentlyHitExpire = Time.time + recentlyHitTime;
@@ -39,6 +43,12 @@ public class CollisionScript : MonoBehaviour
 					Destroy (Zombies, 20);
 
 				} else { //if this is second hit in short amount of time
+					Time.timeScale = 0;
+                    Player x = GameObject.Find("PlayerGameObject").GetComponent<PlayerSingleton>().getPlayer();
+                    x.addHiFives(GameObject.Find("Main Camera").GetComponent<HUDScript>().runHighFives);
+                    x.saveHiFives();
+                    x.addScore((int)(GameObject.Find("Main Camera").GetComponent<HUDScript>().playerScore * 100));
+
 					SceneManager.LoadScene (2);
 				}
 			} else { //if invincible

@@ -1,5 +1,4 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
@@ -39,13 +38,11 @@ public class Controller_Script : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void FixedUpdate () {
-
-
-
 		float movex = Input.GetAxis ("Horizontal");
 
 		GetComponent<Rigidbody> ().velocity = new Vector3 (movex * maxSpeed, GetComponent<Rigidbody> ().velocity.y, speedZ); 
 	}
+
 	void Update()
 	{
 		if(GameObject.Find("Character").transform.position.y <= 66 && Input.GetKeyDown(KeyCode.UpArrow))
@@ -78,7 +75,6 @@ public class Controller_Script : MonoBehaviour {
 			GUI.Box(new Rect(0,0,Screen.width,Screen.height),"");
 			if (GUI.Button (new Rect (Screen.width / 2, Screen.height / 2-75, 100, 50), "Continue")) {
 				showGUI = false;
-
 				Time.timeScale = 4;
 				CanPause = true;
 				
@@ -88,14 +84,14 @@ public class Controller_Script : MonoBehaviour {
 				showGUI = false;
                 GameObject.Find("Character").GetComponent<CollisionScript>().invincibilityExpire = 0;
                 SceneManager.LoadScene (1);
-				Time.timeScale = 1;
-				CanPause = true;
+				//Time.timeScale = 1;
+				//CanPause = true;
 			}
 			if(GUI.Button (new Rect (Screen.width / 2, Screen.height / 2+75, 100, 50),"Main Menu"))
 			{
 				SceneManager.LoadScene (0);
-				Time.timeScale = 1;
-				CanPause = true;
+				//Time.timeScale = 1;
+				//CanPause = true;
 			}
 		}
 

@@ -5,9 +5,14 @@ public class HUDScript : MonoBehaviour {
 	public const float scorePerMillisecond = 0.1f; //0.1 means 100 points per second
 
 	public float playerScore = 0;
+    public int runHighFives = 0;
 	int multiplier = 1;
 	int currentMultiplier = 1;
 
+    GUIStyle recentlyHitStyle = new GUIStyle();
+    GUIStyle invincibilityStyle = new GUIStyle();
+    GUIStyle highFiveStyle = new GUIStyle();
+    GUIStyle scoreStyle = new GUIStyle();
 
 	// Update is called once per frame
 	void Update () {
@@ -40,15 +45,30 @@ public class HUDScript : MonoBehaviour {
 
 	void OnGUI()
 	{
-		GUI.Label(new Rect(10, 10, 100, 30), "Score: " + (int)(playerScore * 100));
+        scoreStyle.fontSize = 20;
+        scoreStyle.normal.textColor = Color.blue;
+        GUI.Label(new Rect(10, 10, 100, 30), "Score: " + (int)(playerScore * 100), scoreStyle);
+
+        invincibilityStyle.normal.textColor = Color.white;
+        invincibilityStyle.fontSize = 20;
         if (Time.time < GameObject.Find("Character").GetComponent<CollisionScript>().invincibilityExpire)
         {
-            GUI.Label(new Rect(120, 10, 250, 30), "Invincibility Time: " + (GameObject.Find("Character").GetComponent<CollisionScript>().invincibilityExpire - Time.time));
+            GUI.Label(new Rect(150, 10, 250, 30), "Invincibility Time: " + (GameObject.Find("Character").GetComponent<CollisionScript>().invincibilityExpire - Time.time)/4.0, invincibilityStyle); //divide by 4 because of timeScale
         }
-        else GUI.Label(new Rect(120, 10, 250, 30), "Invincibility Time: 0");
+        else GUI.Label(new Rect(150, 10, 250, 30), "Invincibility Time: 0", invincibilityStyle);
+
         if (Time.time < GameObject.Find("Character").GetComponent<CollisionScript>().recentlyHitExpire)
         {
-            GUI.Label(new Rect(380, 10, 500, 30), "Time since last hit: " + (GameObject.Find("Character").GetComponent<CollisionScript>().recentlyHitExpire - Time.time) + " (if you get hit again before this time, you die!)");
+            recentlyHitStyle.normal.textColor = Color.red;
+            recentlyHitStyle.fontSize = 20;
+            recentlyHitStyle.alignment = TextAnchor.UpperCenter;
+            GUI.Label(new Rect(0, 10, Screen.width, 30), "You've been hit! Time until healed: " + (GameObject.Find("Character").GetComponent<CollisionScript>().recentlyHitExpire - Time.time)/4.0, recentlyHitStyle); //divide by 4.0 because of timeScale
+            GUI.Label(new Rect(0, 40, Screen.width, 30), "(if you get hit again before this time, you die!)", recentlyHitStyle);
         }
+
+        highFiveStyle.normal.textColor = Color.yellow;
+        highFiveStyle.fontSize = 20;
+        highFiveStyle.alignment = TextAnchor.UpperRight;
+        GUI.Label(new Rect(0, 10, Screen.width-10, 30), "High Fives: " + runHighFives, highFiveStyle);
     }
 }
