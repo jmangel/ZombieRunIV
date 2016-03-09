@@ -24,7 +24,7 @@ public class MainMenuLinksScript : MonoBehaviour {
 	}
 
 	public void ClickAbout() {
-		Debug.LogError ("Clicked the about link");
+		SceneManager.LoadScene ("About");
 	}
 
 	public void HoverOverHowTo() {
@@ -48,6 +48,6 @@ public class MainMenuLinksScript : MonoBehaviour {
 	}
 
 	public void ClickCredits() {
-		Debug.LogError ("Clicked the credits link");
+		SceneManager.LoadScene ("Credits");
 	}
 }
