@@ -79,7 +79,7 @@ public class Controller_Script : MonoBehaviour {
 				CanPause = true;
 				
 			}
-			if(GUI.Button (new Rect (Screen.width / 2, Screen.height / 2, 100, 50),"Restart"))
+			if(GUI.Button (new Rect (Screen.width / 2, Screen.height / 2, 100, 50),"Restart" ))
 			{
 				showGUI = false;
                 GameObject.Find("Character").GetComponent<CollisionScript>().invincibilityExpire = 0;
