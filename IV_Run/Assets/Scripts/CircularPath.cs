@@ -15,8 +15,12 @@ public class CircularPath : MonoBehaviour {
 	//vector
 	public Vector3 offset;
 
+	//initialized to beginning of game
+	public float startTime;
+
 	void Start()
 	{
+		startTime = Time.time;
 		if (offSetIsCenter) {
 			offset = transform.position;
 		}
@@ -25,8 +29,8 @@ public class CircularPath : MonoBehaviour {
 	void Update()
 	{
 		transform.position = new Vector3 (
-			(radius * Mathf.Cos (Time.time * speed)) + offset.x,
-			(radius * Mathf.Sin (Time.time * speed)) + offset.y,
+			(radius * Mathf.Cos ((Time.time-startTime) * speed)) + offset.x,
+			(radius * Mathf.Sin ((Time.time-startTime) * speed)) + offset.y,
 			transform.position.z);
 	}
 }
