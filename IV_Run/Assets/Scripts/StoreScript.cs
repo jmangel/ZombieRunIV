@@ -8,7 +8,6 @@ public class StoreScript : MonoBehaviour {
 
     void OnGUI()
     {
-		Debug.LogError ("started store");
 		Player x = GameObject.Find ("PlayerGameObject").GetComponent<PlayerSingleton> ().getPlayer();
 		GameObject.Find ("HifiveCount").GetComponent<Text> ().text = "" + x.getHiFives ();
 		if (x.getCharacters () <= 1) {
