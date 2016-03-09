@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Destroyer_Script : MonoBehaviour {
-
+	
 	void OnTriggerEnter(Collider other)
 	{
 		if (other.gameObject.transform.parent) {
