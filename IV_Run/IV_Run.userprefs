@@ -1,9 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CameraRunner_Script.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CollisionScript.cs">
     <Files>
+      <File FileName="Assets/Standard Assets/Effects/ImageEffects/Shaders/FisheyeShader.shader" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/SunIntensity.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/CircularPath.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/BuildingSpawnScript.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/CollisionScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/CollisionScript.cs" Line="57" Column="43" />
       <File FileName="Assets/Scripts/BuildingSpawnScript1.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Controller_Script.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/SpawnScript.cs" Line="1" Column="1" />
@@ -22,7 +25,8 @@
       <File FileName="Assets/Scripts/GreetPlayerScript.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/BigObstacleSpawnScript.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/ApiClient.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/CircularPath.cs" Line="1" Column="1" />
+      <File FileName="Assets/Standard Assets/Effects/ImageEffects/Shaders/_DepthOfField/Bokeh34.shader" Line="1" Column="1" />
+      <File FileName="Assets/Standard Assets/Effects/ImageEffects/Scripts/Fisheye.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

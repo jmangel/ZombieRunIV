@@ -37,6 +37,7 @@ public class CollisionScript : MonoBehaviour
 			else{ 
 				invincibilityExpire = Time.time + invincibilityTime;
 			}
+			audioPowerUp.Play();
 			
 			recentlyHitExpire = 0;
 		}
@@ -44,6 +45,7 @@ public class CollisionScript : MonoBehaviour
         else if (collision.gameObject.tag == "Ped"){
             Destroy(collision.gameObject);
             GameObject.Find("Main Camera").GetComponent<HUDScript>().runHighFives += 1;
+			audioHighFive.Play();
         }
 
 		else if (collision.gameObject.tag == "Untagged") {
@@ -54,6 +56,7 @@ public class CollisionScript : MonoBehaviour
 
 					//spawn zombie animation behind character
 					GameObject Zombies = (GameObject) Instantiate (zom[0], new Vector3 (-15, 66, transform.position.z - 15), Quaternion.identity);
+					audioZombieGrowl.Play();
 					Destroy (Zombies, 20);
 
 				} else { //if this is second hit in short amount of time
@@ -69,5 +72,37 @@ public class CollisionScript : MonoBehaviour
 				Destroy (collision.gameObject);
 			}
 		}
-    }
+	}
+
+	public AudioClip highFive;
+ 	public AudioClip zombieGrowl;
+ 	public AudioClip powerUp; 
+	//public AudioClip clipWeapon2;
+ 
+ 	private AudioSource audioHighFive;
+ 	private AudioSource audioZombieGrowl;
+ 	private AudioSource audioPowerUp;
+ 	//private AudioSource audioWeapon2;
+ 
+ 	public AudioSource AddAudio(AudioClip clip, bool loop, bool playAwake, float vol) 
+ 		{ 
+     	//AudioSource newAudio = gameObject.AddComponent(AudioSource);
+		AudioSource newAudio = gameObject.AddComponent<AudioSource>();
+     	newAudio.clip = clip; 
+     	newAudio.loop = loop;
+     	newAudio.playOnAwake = playAwake;
+     	newAudio.volume = vol; 
+     	return newAudio; 
+ 		}
+ 
+ 	public void Awake()
+ 		{
+     	// add the necessary AudioSources:
+		audioHighFive = AddAudio(highFive, false, false, 8f);
+     	audioZombieGrowl = AddAudio(zombieGrowl , false, false, 8f);
+     	audioPowerUp = AddAudio(powerUp, false, false, 8f);
+     	//audioWeapon2 = AddAudio(clipWeapon2, false, false, 0.8); 
+     	} 
 }
+
+

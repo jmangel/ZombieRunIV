@@ -9,7 +9,7 @@ public class SunIntensity : MonoBehaviour {
     }
     void Update() {
 		float pos = GameObject.Find("Sun").transform.position.y;
-		pos = (pos + 28)/120 + 0.2f;
+		pos = (pos + 28)/120;
         lt.intensity = pos;
     }
 }
