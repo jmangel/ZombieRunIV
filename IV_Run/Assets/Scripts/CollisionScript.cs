@@ -15,10 +15,6 @@ public class CollisionScript : MonoBehaviour
 
 	public GameObject[] zom;
 
-	void start() {
-
-	}
-
 	public void zombieTimeout (GameObject z)
 	{
 
