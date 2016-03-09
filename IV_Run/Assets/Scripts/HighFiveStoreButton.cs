@@ -7,6 +7,6 @@ public class HighFiveStoreButton : MonoBehaviour
 
     public void onClick()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("HighFiveStore");
     }
 }

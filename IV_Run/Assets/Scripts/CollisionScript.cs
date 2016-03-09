@@ -49,7 +49,7 @@ public class CollisionScript : MonoBehaviour
                     x.saveHiFives();
                     x.addScore((int)(GameObject.Find("Main Camera").GetComponent<HUDScript>().playerScore * 100));
 
-					SceneManager.LoadScene (2);
+					SceneManager.LoadScene ("ZRIV - Main Menu copy");
 				}
 			} else { //if invincible
 				Destroy (collision.gameObject);

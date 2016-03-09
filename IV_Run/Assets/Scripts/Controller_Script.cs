@@ -83,13 +83,13 @@ public class Controller_Script : MonoBehaviour {
 			{
 				showGUI = false;
                 GameObject.Find("Character").GetComponent<CollisionScript>().invincibilityExpire = 0;
-                SceneManager.LoadScene (1);
+                SceneManager.LoadScene ("demoscene");
 				//Time.timeScale = 1;
 				//CanPause = true;
 			}
 			if(GUI.Button (new Rect (Screen.width / 2, Screen.height / 2+75, 100, 50),"Main Menu"))
 			{
-				SceneManager.LoadScene (0);
+				SceneManager.LoadScene ("ZRIV - Main Menu");
 				//Time.timeScale = 1;
 				//CanPause = true;
 			}

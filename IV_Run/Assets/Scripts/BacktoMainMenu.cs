@@ -6,6 +6,6 @@ public class BacktoMainMenu : MonoBehaviour {
 
 	public void onClick()
 	{
-		SceneManager.LoadScene (0);
+		SceneManager.LoadScene ("ZRIV - Main Menu");
 	}
 }

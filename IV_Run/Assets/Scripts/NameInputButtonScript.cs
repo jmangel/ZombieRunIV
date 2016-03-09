@@ -12,7 +12,7 @@ public class NameInputButtonScript : MonoBehaviour {
 		} else {
 			GameObject.Find ("PlayerGameObject").GetComponent<PlayerSingleton> ().player_name = text;
 			Player x = GameObject.Find ("PlayerGameObject").GetComponent<PlayerSingleton> ().getPlayer();
-			SceneManager.LoadScene (0);
+			SceneManager.LoadScene ("ZRIV - Main Menu");
 			GameObject.Find ("InputError").GetComponent<Text> ().text = x.toString();
 		}
 	}
