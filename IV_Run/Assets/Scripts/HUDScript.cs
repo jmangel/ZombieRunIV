@@ -53,7 +53,7 @@ public class HUDScript : MonoBehaviour {
         invincibilityStyle.fontSize = 20;
         if (Time.time < GameObject.Find("Character").GetComponent<CollisionScript>().invincibilityExpire)
         {
-            GUI.Label(new Rect(150, 10, 250, 30), "Invincibility Time: " + (GameObject.Find("Character").GetComponent<CollisionScript>().invincibilityExpire - Time.time)/4.0, invincibilityStyle); //divide by 4 because of timeScale
+            GUI.Label(new Rect(150, 10, 250, 30), "Invincibility Time: " + ((GameObject.Find("Character").GetComponent<CollisionScript>().invincibilityExpire - Time.time)/4.0).ToString("F2"), invincibilityStyle); //divide by 4 because of timeScale
         }
         else GUI.Label(new Rect(150, 10, 250, 30), "Invincibility Time: 0", invincibilityStyle);
 
@@ -62,7 +62,7 @@ public class HUDScript : MonoBehaviour {
             recentlyHitStyle.normal.textColor = Color.red;
             recentlyHitStyle.fontSize = 20;
             recentlyHitStyle.alignment = TextAnchor.UpperCenter;
-            GUI.Label(new Rect(0, 10, Screen.width, 30), "You've been hit! Time until healed: " + (GameObject.Find("Character").GetComponent<CollisionScript>().recentlyHitExpire - Time.time)/4.0, recentlyHitStyle); //divide by 4.0 because of timeScale
+            GUI.Label(new Rect(0, 10, Screen.width, 30), "You've been hit! Time until healed: " + ((GameObject.Find("Character").GetComponent<CollisionScript>().recentlyHitExpire - Time.time)/4.0).ToString("F2"), recentlyHitStyle); //divide by 4.0 because of timeScale
             GUI.Label(new Rect(0, 40, Screen.width, 30), "(if you get hit again before this time, you die!)", recentlyHitStyle);
         }
 

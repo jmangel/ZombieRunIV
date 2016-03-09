@@ -6,5 +6,9 @@ public class Util
         string uuid = SystemInfo.deviceUniqueIdentifier;
 		return "abc123";
 	}
+
+	public static int getPowerupCost() {
+		return 5;
+	}
 }
 
