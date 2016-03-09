@@ -8,7 +8,7 @@ public class SpawnScript : MonoBehaviour {
 	public float spawnMax = 1f;
 
 	//array of possible obstacle positions
-	private int[] ranges = new int[14] {-9, -10, -11, -12, -13, -14, -15, -16, -17, -18, -19, -20, -21, -22};
+	private int[] ranges = new int[11] {-10, -11, -12, -13, -14, -15, -16, -17, -18, -19, -20};
 
 	// Use this for initialization
 	void Start ()
