@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class MainMenuLinksScript : MonoBehaviour {
 
@@ -35,7 +36,7 @@ public class MainMenuLinksScript : MonoBehaviour {
 	}
 
 	public void ClickHowTo() {
-		Debug.LogError ("Clicked the howto link");
+		SceneManager.LoadScene ("Instructions");
 	}
 
 	public void HoverOverCredits() {
