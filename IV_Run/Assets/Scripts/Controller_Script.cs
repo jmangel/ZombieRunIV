@@ -2,6 +2,7 @@
 using UnityEngine.SceneManagement;
 using System.Collections;
 
+
 public class Controller_Script : MonoBehaviour {
 
 	public float maxSpeed =3;
@@ -12,20 +13,17 @@ public class Controller_Script : MonoBehaviour {
 	public bool showGUI = false;
 	public LayerMask whatIsGround;
 	private Transform objectTransfom;
-	private float noMovementThreshold = 0.0001f;
 	private const int noMovementFrames = 3;
 	Vector3[] previousLocations = new Vector3[noMovementFrames];
-	private bool isMoving;
-	public bool IsMoving
-	{
-		get{ return isMoving; }
-	}
+	private bool audio = true;
+
 
 
 	// Use this for initialization
 	void Start () {
 		 CanPause = true;
 		Time.timeScale = 4;
+
 	
 	}
 	void Awake()
@@ -58,12 +56,25 @@ public class Controller_Script : MonoBehaviour {
 				Time.timeScale = 0;
 				CanPause = false;
 				showGUI = true;
+				AudioListener.volume = 0;
 			} else {
 				CanPause = true;
 				showGUI = false;
 				Time.timeScale = 4;
+				AudioListener.volume = 1;
 			}
 				
+		}
+		if(Input.GetKeyDown(KeyCode.M))
+		{
+			if (audio) {
+				
+				AudioListener.volume = 0;
+				audio = false;
+			} else {
+				AudioListener.volume = 1;
+				audio = true;
+			}
 		}
 
 
@@ -77,6 +88,7 @@ public class Controller_Script : MonoBehaviour {
 				showGUI = false;
 				Time.timeScale = 4;
 				CanPause = true;
+				AudioListener.volume = 1;
 				
 			}
 			if(GUI.Button (new Rect (Screen.width / 2, Screen.height / 2, 100, 50),"Restart" ))
@@ -84,14 +96,12 @@ public class Controller_Script : MonoBehaviour {
 				showGUI = false;
                 GameObject.Find("Character").GetComponent<CollisionScript>().invincibilityExpire = 0;
                 SceneManager.LoadScene ("demoscene");
-				//Time.timeScale = 1;
-				//CanPause = true;
+
 			}
 			if(GUI.Button (new Rect (Screen.width / 2, Screen.height / 2+75, 100, 50),"Main Menu"))
 			{
 				SceneManager.LoadScene ("ZRIV - Main Menu");
-				//Time.timeScale = 1;
-				//CanPause = true;
+
 			}
 		}
 
