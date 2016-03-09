@@ -11,8 +11,5 @@ public class SpawnerSpawnScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		if (GameObject.Find ("Sun").transform.position.y < -60) {
-		Instantiate(
-		}
 	}
 }
