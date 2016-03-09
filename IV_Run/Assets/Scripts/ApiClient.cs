@@ -99,7 +99,6 @@ public class ApiClient
 		string scores_json = client.DownloadString(api + "/players/" + player.getID() + "/scores");
 		//Console.WriteLine(scores);
 		JObject joresp = JObject.Parse(scores_json);
-		Console.WriteLine(joresp["scores"][0].ToString());
 
 		IList<JToken> results = joresp ["scores"].Children ().ToList ();
 

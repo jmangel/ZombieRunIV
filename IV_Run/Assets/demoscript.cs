@@ -7,7 +7,7 @@ public class demoscript : MonoBehaviour {
 	void Update()
 	{
 		if (Input.GetKeyDown ("space")) {
-			myLight.enabled = !myLight.enabled;
+			myLight.enabled = myLight.enabled;
 		} 
 
 	}
