@@ -8,8 +8,10 @@ public class CollisionScript : MonoBehaviour
     public float invincibilityExpire = 0;
     public float recentlyHitExpire = 0;
 
-    int invincibilityTime = 5*4; //get this from upgrade settings in database
+    //Player x = GameObject.Find("PlayerGameObject").GetComponent<PlayerSingleton>().getPlayer();
+    int invincibilityTime = 2*4; //*4 because of timeScale
     int recentlyHitTime = 5*4; //these are x4 because of timeScale
+    bool invincibilityTimeUpdated = false;
 
 	public GameObject[] zom;
 
@@ -21,10 +23,22 @@ public class CollisionScript : MonoBehaviour
     void OnCollisionEnter (Collision collision)
 	{
 		if (collision.gameObject.tag == "PowerUp") {
-			Destroy (collision.gameObject);
-			invincibilityExpire = Time.time + invincibilityTime;
-			recentlyHitExpire = 0;
+			if (invincibilityTime<=2*4 && !invincibilityTimeUpdated) {
+				Player x = GameObject.Find("PlayerGameObject").GetComponent<PlayerSingleton>().getPlayer();
+				invincibilityTime = 2*(int)(Mathf.Sqrt(Mathf.Abs(x.getPowerupLvl())))*4;
+				invincibilityTimeUpdated = true;
+			}
 
+			Destroy (collision.gameObject);
+			
+			if (Time.time < invincibilityExpire){ //if you're already invincible
+				invincibilityExpire = invincibilityExpire + invincibilityTime;
+			}
+			else{ 
+				invincibilityExpire = Time.time + invincibilityTime;
+			}
+			
+			recentlyHitExpire = 0;
 		}
         
         else if (collision.gameObject.tag == "Ped"){
