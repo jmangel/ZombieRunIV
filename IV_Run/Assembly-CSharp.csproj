@@ -70,6 +70,7 @@
      <Compile Include="Assets\Scripts\PlayerSingleton.cs" />
      <Compile Include="Assets\Scripts\Score.cs" />
      <Compile Include="Assets\Scripts\SpawnScript.cs" />
+     <Compile Include="Assets\Scripts\SpawnerSpawnScript.cs" />
      <Compile Include="Assets\Scripts\StoreScript.cs" />
      <Compile Include="Assets\Scripts\SunIntensity.cs" />
      <Compile Include="Assets\Scripts\SunPathFollower.cs" />
