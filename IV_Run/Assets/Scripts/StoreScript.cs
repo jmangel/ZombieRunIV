@@ -9,6 +9,8 @@ public class StoreScript : MonoBehaviour {
     void OnGUI()
     {
 		Player x = GameObject.Find ("PlayerGameObject").GetComponent<PlayerSingleton> ().getPlayer();
+		GameObject.Find ("UpgradePowerupText").GetComponent<Text> ().text = "Upgrade? (" + Util.getPowerupCost () + ")";
+
 		GameObject.Find ("HifiveCount").GetComponent<Text> ().text = "" + x.getHiFives ();
 		if (x.getCharacters () <= 1) {
 			GameObject.Find ("MikeSelected").GetComponent<Text> ().text = "";

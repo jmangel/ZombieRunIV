@@ -8,7 +8,7 @@ public class Util
 	}
 
 	public static int getPowerupCost() {
-		return 5;
+		return 50;
 	}
 }
 
