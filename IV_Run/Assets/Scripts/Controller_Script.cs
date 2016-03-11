@@ -23,6 +23,7 @@ public class Controller_Script : MonoBehaviour {
 	void Start () {
 		 CanPause = true;
 		Time.timeScale = 4;
+		AudioListener.volume = 1;
 
 	
 	}
