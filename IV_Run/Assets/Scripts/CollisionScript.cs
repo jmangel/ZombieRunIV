@@ -8,21 +8,15 @@ public class CollisionScript : MonoBehaviour
     public float invincibilityExpire = 0;
     public float recentlyHitExpire = 0;
 
-    //Player x = GameObject.Find("PlayerGameObject").GetComponent<PlayerSingleton>().getPlayer();
     int invincibilityTime = 2*4; //*4 because of timeScale
     int recentlyHitTime = 5*4; //these are x4 because of timeScale
     bool invincibilityTimeUpdated = false;
 
 	public GameObject[] zom;
-
-	public void zombieTimeout (GameObject z)
-	{
-
-	}
     
     void OnCollisionEnter (Collision collision)
 	{
-		if (collision.gameObject.tag == "PowerUp") {
+		if (collision.gameObject.tag == "PowerUp") { // if one hits a powerup
 			if (invincibilityTime<=2*4 && !invincibilityTimeUpdated) {
 				Player x = GameObject.Find("PlayerGameObject").GetComponent<PlayerSingleton>().getPlayer();
 				invincibilityTime = 2*(int)(Mathf.Sqrt(Mathf.Abs(x.getPowerupLvl())))*4;
@@ -41,8 +35,8 @@ public class CollisionScript : MonoBehaviour
 			
 			recentlyHitExpire = 0;
 		}
-        
-        else if (collision.gameObject.tag == "Ped"){
+
+        else if (collision.gameObject.tag == "Ped"){ //if one hits a pedestrian
             Destroy(collision.gameObject);
             GameObject.Find("Main Camera").GetComponent<HUDScript>().runHighFives += 1;
 			audioHighFive.Play();
@@ -74,19 +68,23 @@ public class CollisionScript : MonoBehaviour
 		}
 	}
 
+	// This section of code is for sound effects upon hit:
+	// There are 3 sounds files that can be added from the interface in Unity:
+	// * highFive - for when one collides with a pedestrian
+	// * zombieGrowl - for when one collides with an obstacle and doesnt die
+	// * powerUp - for when one collides with a powerup
+
 	public AudioClip highFive;
  	public AudioClip zombieGrowl;
  	public AudioClip powerUp; 
-	//public AudioClip clipWeapon2;
  
  	private AudioSource audioHighFive;
  	private AudioSource audioZombieGrowl;
- 	private AudioSource audioPowerUp;
- 	//private AudioSource audioWeapon2;
- 
+ 	private AudioSource audioPowerUp;	
+
+ 	// Addaudio post conditions: a new AudioSource is made which can be called upon in other places in the code
  	public AudioSource AddAudio(AudioClip clip, bool loop, bool playAwake, float vol) 
  		{ 
-     	//AudioSource newAudio = gameObject.AddComponent(AudioSource);
 		AudioSource newAudio = gameObject.AddComponent<AudioSource>();
      	newAudio.clip = clip; 
      	newAudio.loop = loop;
@@ -94,14 +92,14 @@ public class CollisionScript : MonoBehaviour
      	newAudio.volume = vol; 
      	return newAudio; 
  		}
- 
+
+ 	// Upon game start, 3 sounds are available to be called upon.
  	public void Awake()
  		{
      	// add the necessary AudioSources:
 		audioHighFive = AddAudio(highFive, false, false, 8f);
      	audioZombieGrowl = AddAudio(zombieGrowl , false, false, 8f);
      	audioPowerUp = AddAudio(powerUp, false, false, 8f);
-     	//audioWeapon2 = AddAudio(clipWeapon2, false, false, 0.8); 
      	} 
 }
 

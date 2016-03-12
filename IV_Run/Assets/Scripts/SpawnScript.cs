@@ -1,9 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Object spawns random obstacles in a random place in the road at a limited random time.
+// preconditions: nothing besides that the game is running
+// postconditions: an obstacle is spawned somewhere in the road with each recursvie call.
+
+
 public class SpawnScript : MonoBehaviour {
 
 	public GameObject[] obj;
+	//time delay variables
 	public float spawnMin = .5f;
 	public float spawnMax = 1f;
 
@@ -16,10 +22,10 @@ public class SpawnScript : MonoBehaviour {
 		Spawn ();
 	}
 
-
+	// Recursive spawn function
 	void Spawn ()
 	{
 		Instantiate (obj [Random.Range (0, obj.GetLength (0))], new Vector3 (ranges [Random.Range (0, ranges.Length)], transform.position.y, transform.position.z), Quaternion.identity);
-		Invoke ("Spawn", Random.Range (spawnMin, spawnMax));
+		Invoke ("Spawn", Random.Range (spawnMin, spawnMax)); // delayed recursive call
 	}
 	}

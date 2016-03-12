@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+// object generates device identifier and returns powerup price
+
 public class Util
 {
 	public static string getDeviceID() {
