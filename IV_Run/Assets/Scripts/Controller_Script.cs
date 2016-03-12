@@ -2,20 +2,19 @@
 using UnityEngine.SceneManagement;
 using System.Collections;
 
+//has all the controls for character
 
 public class Controller_Script : MonoBehaviour {
 
-	public float maxSpeed =3;
-	public float speedZ =50;
+	public float maxSpeed =3;    //speed in x axis
+	public float speedZ =50;     //speed in z axis
 
-	public float jumpForce = 700;
-	bool CanPause = true;
-	public bool showGUI = false;
-	public LayerMask whatIsGround;
-	private Transform objectTransfom;
-	private const int noMovementFrames = 3;
-	Vector3[] previousLocations = new Vector3[noMovementFrames];
-	private bool audio = true;
+	public float jumpForce = 700;   //force of jump
+	bool CanPause = true;			//can pause game
+	public bool showGUI = false;    // shows GUI
+	private const int noMovementFrames = 3;    //checks movement
+	Vector3[] previousLocations = new Vector3[noMovementFrames];   //keeps storage of previous locations
+	private bool audio = true;    //checks audio
 
 
 
@@ -36,21 +35,26 @@ public class Controller_Script : MonoBehaviour {
 		}
 	}
 	// Update is called once per frame
+
+	//gets Rigidbody velocity
 	void FixedUpdate () {
 		float movex = Input.GetAxis ("Horizontal");
-
 		GetComponent<Rigidbody> ().velocity = new Vector3 (movex * maxSpeed, GetComponent<Rigidbody> ().velocity.y, speedZ); 
 	}
 
 	void Update()
 	{
+		//jump if up arrow is pressed
 		if(GameObject.Find("Character").transform.position.y <= 66 && Input.GetKeyDown(KeyCode.UpArrow))
 		{
 			GetComponent<Rigidbody>().AddForce(new Vector3(0,jumpForce,speedZ));
 		}
+		// quickly lower if in the air if down arrow pressed
 		if (GameObject.Find ("Character").transform.position.y > 65.5 && Input.GetKeyDown (KeyCode.DownArrow)) {
 			GetComponent<Rigidbody> ().AddForce (new Vector3 (0, -jumpForce, speedZ));
 		}
+
+		//pause game if escape key is press
 		if (Input.GetKeyDown (KeyCode.Escape)) {
 			if (CanPause) {
 				Debug.Log ("pause");
@@ -58,7 +62,9 @@ public class Controller_Script : MonoBehaviour {
 				CanPause = false;
 				showGUI = true;
 				AudioListener.volume = 0;
-			} else {
+			} 
+			//if escape button pressed in pop up, then resume game
+			else {
 				CanPause = true;
 				showGUI = false;
 				Time.timeScale = 4;
@@ -66,6 +72,7 @@ public class Controller_Script : MonoBehaviour {
 			}
 				
 		}
+		//mute game or unmute game
 		if(Input.GetKeyDown(KeyCode.M))
 		{
 			if (audio) {
@@ -80,11 +87,15 @@ public class Controller_Script : MonoBehaviour {
 
 
 	}
+	//PRE: NONE
+	//POST: shows or close GUI
 	void OnGUI()
 	{
+		// if showGUI is true
 		if(showGUI)
 		{
 			GUI.Box(new Rect(0,0,Screen.width,Screen.height),"");
+			//creates button, if press continue gameplay
 			if (GUI.Button (new Rect (Screen.width / 2, Screen.height / 2-75, 100, 50), "Continue")) {
 				showGUI = false;
 				Time.timeScale = 4;
@@ -92,6 +103,7 @@ public class Controller_Script : MonoBehaviour {
 				AudioListener.volume = 1;
 				
 			}
+			//restarts game if  restart button is pressed
 			if(GUI.Button (new Rect (Screen.width / 2, Screen.height / 2, 100, 50),"Restart" ))
 			{
 				showGUI = false;
@@ -99,6 +111,7 @@ public class Controller_Script : MonoBehaviour {
                 SceneManager.LoadScene ("demoscene");
 
 			}
+			//goes to main menu if main menu button pressed
 			if(GUI.Button (new Rect (Screen.width / 2, Screen.height / 2+75, 100, 50),"Main Menu"))
 			{
 				SceneManager.LoadScene ("ZRIV - Main Menu");
