@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+//spawns the buildings on the road
 public class BuildingSpawnScript : MonoBehaviour {
 
 	public GameObject[] obj;
@@ -15,7 +15,7 @@ public class BuildingSpawnScript : MonoBehaviour {
 	{
 		Spawn ();
 	}
-
+	//spawns random size buildings on the plane
 	void Spawn()
 	{
 		Instantiate(obj[Random.Range(0,obj.GetLength(0))], new Vector3(ranges[Random.Range(0, ranges.Length)], transform.position.y, transform.position.z), Quaternion.identity);

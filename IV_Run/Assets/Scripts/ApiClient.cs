@@ -6,12 +6,12 @@ using System.IO;
 using Newtonsoft.Json.Linq;
 
 using UnityEngine;
-
+//connects to API
 public class ApiClient
 {
 	static string api = "http://zombie-run-iv.herokuapp.com";
 
-
+	//Gets the players information
     public static Player getPlayer(string name) {
 		Player player = null;
 		string endpoint = api + "/players/find?name=" + name + "&device_id=" + Util.getDeviceID ();
@@ -39,7 +39,7 @@ public class ApiClient
 		);
 		return player;
 	}
-
+	//creates the player
 	public static Player createPlayer(string name) {
 		Player player = null;
 		string endpoint = api + "/players?name=" + name + "&device_id=" + Util.getDeviceID ();
@@ -58,13 +58,12 @@ public class ApiClient
 		return player;
 
 	}
-
+	// gets the scores from api
 	public static List<Score> getScores() {
 		List<Score> scores = new List<Score>();
 
 		WebClient client = new WebClient();
 		string scores_json = client.DownloadString(api + "/scores");
-		//Console.WriteLine(scores);
 		JObject joresp = JObject.Parse(scores_json);
 		Console.WriteLine(joresp["scores"][0].ToString());
 
@@ -82,12 +81,12 @@ public class ApiClient
 //		).ToList();
 		return scores;
 	}
-
+	//returns the player scores
 	public static List<Score> getScores(string name) {
 		Player player = ApiClient.getPlayer (name);
 		return ApiClient.getScores (player);
 	}
-
+	//returns the score list
 	public static List<Score> getScores(Player player) {
 		List<Score> scores = new List<Score>();
 		if (player == null) {
@@ -115,7 +114,7 @@ public class ApiClient
 //		).ToList();
 		return scores;
 	}
-
+	//enters the new score to the API
 	public static int newScore(int score, string name)
 	{
 		Score s = new Score(score, name, null);
@@ -140,7 +139,7 @@ public class ApiClient
 			return -1;
 		}
 	}
-
+	//saves the highfive score
 	public static bool saveHiFives(int pid, int hifives) {
 		string endpoint = api + "/players/"+pid+"/hifives?hifives="+hifives;
 		HttpWebRequest req = (HttpWebRequest)WebRequest.Create (endpoint);
@@ -149,7 +148,7 @@ public class ApiClient
 
 		return resp.StatusCode == HttpStatusCode.OK;
 	}
-
+	//saves the character being used
 	public static bool saveCharacters(int pid, int characters) {
 		string endpoint = api + "/players/"+pid+"/characters?characters="+characters;
 		HttpWebRequest req = (HttpWebRequest)WebRequest.Create (endpoint);
@@ -158,7 +157,7 @@ public class ApiClient
 
 		return resp.StatusCode == HttpStatusCode.OK;
 	}
-
+	//saves the powerup level to server
 	public static bool savePowerupLvl(int pid, int powerup_lvl) {
 		string endpoint = api + "/players/"+pid+"/powerup_lvl?powerup_lvl="+powerup_lvl;
 		HttpWebRequest req = (HttpWebRequest)WebRequest.Create (endpoint);
