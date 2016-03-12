@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-// object generates device identifier and returns powerup price
+// in the final version, this would return the device unique identifier so that multiple users could have the same name but doesn't statistics.
 
 public class Util
 {
