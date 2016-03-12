@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 public class Player
 {
+	//initialize the variables used to identify a player and store its stats
 	int id;
 	string name;
 	string device_id;
@@ -13,6 +14,7 @@ public class Player
     Score lastScore = null;
     int lastRank = -1;
 
+    //construct a player instance with some initial info
 	public Player (int id, string name, int hifive_count, int characters, int powerup_lvl) {
 		this.id = id;
 		this.device_id = Util.getDeviceID ();
@@ -22,6 +24,7 @@ public class Player
 		this.powerup_lvl = powerup_lvl;
 	}
 
+	//returns a string describing the player
 	public string toString() {
 		return "Player " + this.id + " has name " + this.name + 
 			" \nand is registered on device " + this.device_id + 
@@ -29,6 +32,8 @@ public class Player
 			this.characters + " characters, \nand powerup level " + this.powerup_lvl;
 	}
 
+	/*getters for ID, name, most recent score, and most recent score rank*/
+	
 	public int getID() {
 		return this.id;
 	}
